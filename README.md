@@ -1,6 +1,6 @@
-﻿<div align="center">
+<div align="center">
 
-# ðŸ—ï¸ EduFlow ERP
+# 🏗️ EduFlow ERP
 
 **Enterprise Resource Planning System for Educational Technology**
 
@@ -17,90 +17,34 @@ A unified ERP platform integrating HR, Finance, and Operations modules for an ed
 
 ---
 
-## âœ¨ Features
+## ✨ Features
 
-- ðŸ“Š **Unified Dashboard** - Cross-module KPIs: revenue, headcount, expenses, fund utilization in one view
-- ðŸ‘¥ **HR Module** - Employee count, department distribution, attendance rates, leave utilization
-- ðŸ’° **Finance Module** - Income tracking, expense management, P&L summary, cash flow overview
-- ðŸ¦ **Fund Management** - Budget allocation, fund utilization, pending approvals, variance analysis
-- ðŸ“ˆ **Cross-Module Reports** - Revenue per employee, cost per department, budget vs actual analysis
-- ðŸ” **Unified Authentication** - Single JWT auth across all modules with role-based access
-- ðŸ”— **Module Integration** - Cross-references between HR, Finance, and Operations data
-- ðŸ“± **Responsive Design** - Mobile-first dashboard optimized for all screen sizes
+- 📊 **Unified Dashboard** - Cross-module KPIs: revenue, headcount, expenses, fund utilization in one view
+- 👥 **HR Module** - Employee count, department distribution, attendance rates, leave utilization
+- 💰 **Finance Module** - Income tracking, expense management, P&L summary, cash flow overview
+- 🏦 **Fund Management** - Budget allocation, fund utilization, pending approvals, variance analysis
+- 📈 **Cross-Module Reports** - Revenue per employee, cost per department, budget vs actual analysis
+- 🔐 **Unified Authentication** - Single JWT auth across all modules with role-based access
+- 🔗 **Module Integration** - Cross-references between HR, Finance, and Operations data
+- 📱 **Responsive Design** - Mobile-first dashboard optimized for all screen sizes
 
-## ðŸ—ï¸ Architecture
-
-```
-â”Œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”
-â”‚              EduFlow ERP Dashboard                â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¬â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚ HR Moduleâ”‚ Finance  â”‚ Funds    â”‚ Operations      â”‚
-â”‚ (EMS)    â”‚ (Income+ â”‚ (Alloc)  â”‚ (Cross-module)  â”‚
-â”‚          â”‚ Expense) â”‚          â”‚                  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”´â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚           Unified Express.js API                  â”‚
-â”œâ”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”¤
-â”‚              PostgreSQL Database                  â”‚
-â””â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”˜
-```
-
-## ðŸ“ Project Structure
+## 🏗️ Architecture
 
 ```
-EduFlow-ERP/
-â”œâ”€â”€ backend/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ app.js                  # Express with all module routes
-â”‚   â”‚   â”œâ”€â”€ config/                 # Database, constants
-â”‚   â”‚   â”œâ”€â”€ controllers/
-â”‚   â”‚   â”‚   â”œâ”€â”€ dashboardController.js  # Cross-module analytics
-â”‚   â”‚   â”‚   â”œâ”€â”€ hrController.js         # HR module endpoints
-â”‚   â”‚   â”‚   â”œâ”€â”€ financeController.js    # Finance module endpoints
-â”‚   â”‚   â”‚   â”œâ”€â”€ fundController.js       # Fund management endpoints
-â”‚   â”‚   â”‚   â””â”€â”€ integrationController.js # Cross-module queries
-â”‚   â”‚   â”œâ”€â”€ middleware/             # Auth, error handling
-â”‚   â”‚   â”œâ”€â”€ routes/                 # Module-based routing
-â”‚   â”‚   â”œâ”€â”€ services/               # Business logic
-â”‚   â”‚   â””â”€â”€ utils/                  # Helpers, formatters
-â”‚   â”œâ”€â”€ migrations/                 # Unified schema
-â”‚   â””â”€â”€ seeds/                      # Sample data
-â”œâ”€â”€ frontend/
-â”‚   â”œâ”€â”€ src/
-â”‚   â”‚   â”œâ”€â”€ components/
-â”‚   â”‚   â”‚   â”œâ”€â”€ ERPDashboard.jsx    # Main ERP dashboard
-â”‚   â”‚   â”‚   â”œâ”€â”€ HROverview.jsx      # HR module view
-â”‚   â”‚   â”‚   â”œâ”€â”€ FinanceOverview.jsx  # Finance module view
-â”‚   â”‚   â”‚   â”œâ”€â”€ FundOverview.jsx     # Fund module view
-â”‚   â”‚   â”‚   â”œâ”€â”€ ModuleNav.jsx        # Module navigation
-â”‚   â”‚   â”‚   â””â”€â”€ ReportsPanel.jsx     # Cross-module reports
-â”‚   â”‚   â””â”€â”€ services/api.js
-â”‚   â””â”€â”€ package.json
-â””â”€â”€ README.md
+┌──────────────────────────────────────────────────┐
+│              EduFlow ERP Dashboard                │
+├──────────┬──────────┬──────────┬─────────────────┤
+│ HR Module│ Finance  │ Funds    │ Operations      │
+│ (EMS)    │ (Income+ │ (Alloc)  │ (Cross-module)  │
+│          │ Expense) │          │                  │
+├──────────┴──────────┴──────────┴─────────────────┤
+│           Unified Express.js API                  │
+├──────────────────────────────────────────────────┤
+│              PostgreSQL Database                  │
+└──────────────────────────────────────────────────┘
 ```
 
-## ðŸ› ï¸ Tech Stack
-
-| Technology | Purpose |
-|-----------|---------|
-| Node.js 20 | Runtime environment |
-| Express.js 4 | Unified API gateway |
-| PostgreSQL 15 | Relational database |
-| React 18 | Frontend framework |
-| Chart.js 4 | Data visualization |
-| JWT | Cross-module authentication |
-| Knex.js | Query builder + migrations |
-
-## ðŸš€ Getting Started
-
-```bash
-git clone https://github.com/KHALEDNOAMAN/EduFlow-ERP.git
-cd EduFlow-ERP/backend
-npm install && cp .env.example .env
-npx knex migrate:latest && npx knex seed:run
-npm run dev
-```
-
-## ðŸ“¡ API Endpoints
+## 📡 API Endpoints
 
 ### Dashboard (Cross-Module)
 | Method | Endpoint | Description |
@@ -117,12 +61,18 @@ npm run dev
 | GET | `/api/integration/cost-by-department` | Total cost per department |
 | GET | `/api/integration/budget-vs-actual` | Budget variance analysis |
 
-## ðŸ“ License
+## 🚀 Getting Started
 
+```bash
+git clone https://github.com/KHALEDNOAMAN/EduFlow-ERP.git
+cd EduFlow-ERP/backend
+npm install && cp .env.example .env
+npx knex migrate:latest && npx knex seed:run
+npm run dev
+```
+
+## 📝 License
 MIT License - see [LICENSE](LICENSE) file.
 
 ---
-
-<div align="center">
-  Built with â¤ï¸ during internship at EduTech Yazilim A.S. - Istanbul, Turkey
-</div>
+<div align="center">Built with ❤️ during internship at EduTech Yazilim A.S. - Istanbul, Turkey</div>
